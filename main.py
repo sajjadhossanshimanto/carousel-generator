@@ -53,3 +53,18 @@ def startup_setting():
     select_langulage()
     Select(br.find_element(By.XPATH, theme_xpath)).select_by_value("base16-dark")
 
+#%%
+chrome_default_download = r"C:\Users\Lenovo ideaPad 3\Downloads"
+def download_image():
+    pre = set(os.listdir(chrome_default_download))
+    br.execute_script("downloadImage()")
+    while 1:
+        sleep(2.5)
+        now = set(os.listdir(chrome_default_download))
+        for i in now.difference(pre):
+            if "beautify-picture" in i:
+                return Path(chrome_default_download).joinpath(i)
+
+download_image()
+
+
