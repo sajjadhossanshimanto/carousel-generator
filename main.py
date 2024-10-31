@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import Select
 port=8282
 chrome_path=r"D:\program data\chrome-testing-win64"
 chrome_options = Options()
-# chrome_options.add_experimental_option("debuggerAddress", f"127.0.0.1:{port}")
+chrome_options.add_experimental_option("debuggerAddress", f"127.0.0.1:{port}")
 # chrome_options.add_experimental_option("detach", True)
 
 
