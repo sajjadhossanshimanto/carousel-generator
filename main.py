@@ -42,10 +42,13 @@ def _drop_down(xpath, value):
     Select(br.find_element(By.XPATH, xpath)).select_by_value(value)
 
 def set_code(code):
+    clear_code()
+
     a=br.find_element(By.XPATH, code_div_xpath)
     br.execute_script("arguments[0].style.overflow = 'visible';", a)
     br.find_element(By.XPATH, code_area_xpath).send_keys(s)
     br.execute_script("arguments[0].style.overflow = 'hidden';", a)
+    
     a.send_keys(code)
 
 def clear_code():
