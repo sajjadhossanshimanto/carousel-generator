@@ -35,6 +35,12 @@ Width_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 
 code_div_xpath = "/html/body/div[1]/section[2]/div[2]/div[2]/div[1]/div/div/div[1]/div[2]/div/div"
 
 # %%
+def _change_value(xpath, value):
+    br.execute_script(f"arguments[0].value = '{value}';", br.find_element(By.XPATH, xpath))
+
+def _drop_down(xpath, value):
+    Select(br.find_element(By.XPATH, xpath)).select_by_value(value)
+
 def set_code(code):
     a=br.find_element(By.XPATH, code_div_xpath)
     br.execute_script("arguments[0].style.overflow = 'visible';", a)
@@ -45,13 +51,16 @@ def set_code(code):
 def clear_code():
     br.execute_script("clearCodeArea()")
 
-def select_langulage(lang = "python"):
-    Select(br.find_element(By.XPATH, languale_xpath)).select_by_value(lang)
-
 def startup_setting():
     br.execute_script("showHideBranding('hide')")
-    select_langulage()
-    Select(br.find_element(By.XPATH, theme_xpath)).select_by_value("base16-dark")
+    
+    _change_value(pading_xpath, 0)
+    _change_value(Width_xpath, 0)
+
+    _drop_down(languale_xpath, "python")
+    _drop_down(theme_xpath, "base16-dark")
+    
+    clear_code()
 
 #%%
 chrome_default_download = r"C:\Users\Lenovo ideaPad 3\Downloads"
