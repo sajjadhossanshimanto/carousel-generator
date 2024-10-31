@@ -33,7 +33,7 @@ code_area_xpath = "/html/body/div[1]/section[2]/div[2]/div[2]/div[1]/div/div/div
 # clear_code_xpath = "/html/body/div[1]/section[2]/div[2]/div[2]/div[2]/div[2]/button"
 pading_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-4']/div[@class='columns'][2]/div[@class='column'][1]/div[@class='field']/p[@class='control has-icons-right']/input[@id='inputPadding']"
 Width_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-4']/div[@class='columns'][2]/div[@class='column is-4']/div[@class='field']/p[@class='control has-icons-right']/input[@id='inputWidth']"
-
+ribon_bar_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-8']/div[@class='table-container']/div/div[@id='background']/div[@id='cardSection']/div[@class='columns is-mobile']"
 
 ## hidden element
 code_div_xpath = "/html/body/div[1]/section[2]/div[2]/div[2]/div[1]/div/div/div[1]/div[2]/div/div"
@@ -75,6 +75,9 @@ def startup_setting():
     
     clear_code()
 
+## for text output
+# _style_attrikbute("display", "flex", ribon_bar_xpath)
+# _style_attrikbute("display", "none", ribon_bar_xpath)
 #%%
 chrome_default_download = r"C:\Users\Lenovo ideaPad 3\Downloads"
 def download_image():
