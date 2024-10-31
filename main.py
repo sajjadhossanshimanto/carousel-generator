@@ -45,6 +45,12 @@ def _change_value(xpath, value):
 def _drop_down(xpath, value):
     Select(br.find_element(By.XPATH, xpath)).select_by_value(value)
 
+def _style_attrikbute(key:str, value:str, xpath):
+    br.execute_script(
+        f"arguments[0].style.{key} = '{value}';",
+        br.find_element(By.XPATH, xpath)
+    )
+
 def set_code(code):
     clear_code()
 
