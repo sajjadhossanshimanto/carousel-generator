@@ -55,9 +55,9 @@ def set_code(code):
     clear_code()
 
     a=br.find_element(By.XPATH, code_div_xpath)
-    br.execute_script("arguments[0].style.overflow = 'visible';", a)
+    _style_attrikbute("overflow", 'visible', code_div_xpath)
     br.find_element(By.XPATH, code_area_xpath).send_keys(s)
-    br.execute_script("arguments[0].style.overflow = 'hidden';", a)
+    _style_attrikbute("overflow", 'hidden', code_div_xpath)
     
     a.send_keys(code)
 
