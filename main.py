@@ -21,12 +21,12 @@ br.get("https://codebeautify.org/code-to-image-converter")
 
 
 #%%
-download_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-8']/div[@class='columns has-text-centered']/div[@class='column is-4 pl-0']/div[@class='field has-addons']/div[@class='control'][1]/button[@id='download']/span[2]"
+# download_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-8']/div[@class='columns has-text-centered']/div[@class='column is-4 pl-0']/div[@class='field has-addons']/div[@class='control'][1]/button[@id='download']/span[2]"
 languale_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-4']/div[@class='columns'][1]/div[@class='column'][2]/div[@class='field']/div[@class='select is-fullwidth']/select[@id='selectLanguage']"
 theme_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-4']/div[@class='columns'][1]/div[@class='column'][1]/div[@class='field']/div[@class='select is-fullwidth']/select[@id='selectThemes']"
 file_name_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-4']/div[@class='field'][2]/div[@class='control']/input[@id='inputFileName']"
 code_area_xpath = "/html/body/div[1]/section[2]/div[2]/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/textarea"
-clear_code_xpath = "/html/body/div[1]/section[2]/div[2]/div[2]/div[2]/div[2]/button"
+# clear_code_xpath = "/html/body/div[1]/section[2]/div[2]/div[2]/div[2]/div[2]/button"
 pading_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-4']/div[@class='columns'][2]/div[@class='column'][1]/div[@class='field']/p[@class='control has-icons-right']/input[@id='inputPadding']"
 Width_xpath = "/html/body/div[@id='app']/section[@class='container section pt-5 is-fluid']/div[@class='columns']/div[@class='column is-4']/div[@class='columns'][2]/div[@class='column is-4']/div[@class='field']/p[@class='control has-icons-right']/input[@id='inputWidth']"
 
