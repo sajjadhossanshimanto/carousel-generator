@@ -1,4 +1,8 @@
 #%%
+import os
+from time import sleep
+from pathlib import Path
+#%%
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -68,6 +72,7 @@ def startup_setting():
 #%%
 chrome_default_download = r"C:\Users\Lenovo ideaPad 3\Downloads"
 def download_image():
+    # better than screen short of element. screenshort is not free from overlay
     pre = set(os.listdir(chrome_default_download))
     br.execute_script("downloadImage()")
     while 1:
@@ -77,6 +82,7 @@ def download_image():
             if "beautify-picture" in i:
                 return Path(chrome_default_download).joinpath(i)
 
-download_image()
+# download_image()
 
 
+#%%
